@@ -54,9 +54,6 @@ class HomeComponent extends Component<{
   render() {
     return (
       <Container style={{
-        overflow: "hidden",
-        backgroundSize: "cover",
-        backgroundPosition: "right",
         height: "125vh",
         marginBottom: "-25vh"
       }}>
