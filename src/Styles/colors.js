@@ -1,6 +1,6 @@
 // Site color scheme
 export const colors = {
-	headerNavigationBackground: "#3660AD",
+	headerNavigationBackground: "#2390f6",
 	mainNavigationBackground: "#427DDF",
 
 	siteStatus: "#4F866D",
@@ -8,15 +8,15 @@ export const colors = {
 	linkColor: "#DEDE66",
 	activeLinkColor: "#4578EA",
 
-	secondary: "#3FD9D6",
-	secondary2: "#37BFBD",
-	secondary3: "#30A6A4",
-	secondary4: "#298C8B",
-	secondary5: "#217371",
+	secondary: "#47A2F7",
+	secondary2: "#2390F6",
+	secondary3: "#1E8EF6",
+	secondary4: "#0978E1",
+	secondary5: "#0863B8",
 
 	mainButtonColor: "#1E6795",
 
-	primary: "#005FFC",
+	primary: "#4AD96D",
 	primary2: "#41BF61",
 	primary3: "#38A654",
 	primary4: "#308C47",
