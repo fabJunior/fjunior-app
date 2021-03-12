@@ -1,0 +1,169 @@
+/*************************************************IMPORTS *************************************************************/
+/* We can add all general purpose scss imports here, that way other files need only import this one file to use them */
+@import "colors.scss";
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Raleway&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css");
+
+/******************************************* GLOBALS && ROOT **********************************************************/
+/*  All components will inherit styles from these selectors (body, etc...)  */
+
+body {
+  min-height: 100vh;
+  font-size: 12px;
+}
+
+#root, .root {
+  @include flex-display();
+  @include flex-direction(column);
+
+  text-rendering: optimizeLegibility;
+  height: inherit;
+  min-height: inherit;
+  width: inherit;
+  font-size: calc(1em + 1vmin);
+
+  color: #FFFFFF;
+  background-color: $scrollBackground; // for margin and stuff
+  @include scrollbars(.5em, $scrollBarThumb, $scrollBackground);
+
+  // Firefox scrollbars
+  scrollbar-color: $scrollBarThumb $scrollBackground;
+  scrollbar-width: thin;
+
+  // Root for link colors
+  a {
+    color: $linkColor;
+  }
+
+  // Make all svg icons change color on hover
+  a svg:hover {
+    path {
+      fill: $activeLinkColor !important;
+    }
+  }
+}
+
+/*************************************** MAIN COMPONENTS SPECIFICS ****************************************************/
+
+.HomeContainer {
+  background-size: cover;
+  background-image: linear-gradient(130deg, rgb(15 15 25), rgb(0 0 10));
+}
+
+/*********************************************** CLASSES FOR MIXINS *************************************************/
+
+.flexChildStatic {
+  @include flex(1 1 0);
+}
+
+.flexChildNoResize {
+  @include flex(0 0 auto);
+}
+
+.flexChildShrink {
+  @include flex(0 1 auto);
+}
+
+.flexChildAuto {
+  @include flex(1 0 auto);
+}
+
+.flexChildFill {
+  @include flex(0 1 100%);
+}
+
+.flexSplit {
+  @include flex(1 0 49%);
+}
+
+.flexDisplay {
+  @include flex-display();
+}
+
+.flexColumn {
+  @include flex-display();
+  @include flex-direction(column);
+}
+
+.flexAlignCenter {
+  @include align-items(center);
+}
+
+.flexAlignEnd {
+  @include align-items(flex-end);
+}
+
+.flexCenter {
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.flexJustifyStart {
+  @include justify-content(flex-start);
+}
+
+.flexJustifyEnd {
+  @include justify-content(flex-end);
+}
+
+.flexJustifyEvenly {
+  @include justify-content(space-around);
+}
+
+.flexJustifyBetween {
+  @include justify-content(space-between);
+}
+
+.flexJustifyCenter {
+  @include justify-content(center);
+}
+
+.flexWrap {
+  @include flex-wrap(wrap);
+}
+
+/*********************************************** MISC *************************************************/
+
+.hInherit {
+  height: inherit;
+  min-height: inherit;
+}
+
+.hAuto {
+  height: auto;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.wFill {
+  width: 100%;
+  width: -moz-available; /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+}
+
+.overflowHidden {
+  overflow: hidden
+}
+
+.overflowYAuto {
+  overflow-y: auto;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.invert {
+  filter: invert(100%);
+}

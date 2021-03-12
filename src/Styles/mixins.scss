@@ -1,0 +1,450 @@
+// --------------------------------------------------
+// Clearfix
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `::before` to contain the top-margins of child elements.
+@mixin clearfix() {
+  &::before,
+  &::after {
+    content: " "; //1
+    display: table; //2
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+// --------------------------------------------------
+//Positioning
+@mixin position-absolute($top: auto,$right: $top, $bottom: $top,$left: $right) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position-fixed($top: auto,$right: $top, $bottom: $top,$left: $right) {
+  position: fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position-relative($top: auto,$right: $top, $bottom: $top,$left: $right) {
+  position: relative;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position-sticky($top: auto,$right: $top, $bottom: $top,$left: $right) {
+  position: -webkit-sticky;
+  position: sticky;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+//---------------------------------------------------
+//Link
+@mixin a-clear-internal($color: inherit, $colorHover: $color) {
+  & a {
+    color: $color;
+    text-decoration: none;
+
+    &:hover {
+      color: $colorHover;
+    }
+
+    &:visited {
+      color: $color;
+    }
+  }
+}
+
+@mixin a-clear($color: inherit, $colorHover: $color) {
+  color: $color;
+  text-decoration: none;
+
+  &:hover {
+    color: $colorHover;
+  }
+
+  &:visited {
+    color: $color;
+  }
+}
+
+//---------------------------------------------------
+// Box sizing
+@mixin box-sizing($boxmodel: border-box) {
+  -webkit-box-sizing: $boxmodel;
+  -moz-box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
+}
+
+//-----------------------------------------------------
+//shadow
+@mixin drop-shadow($x: 0,$y: 1px,$blur: 3px,$intensity: 0.3) {
+  box-shadow: $x $y $blur rgba(0, 0, 0, $intensity);
+}
+
+@mixin inner-shadow($x: 0,$y: 1px,$blur: 3px,$intensity: 0.3) {
+  box-shadow: inset $x $y $blur rgba(0, 0, 0, $intensity);
+}
+
+// Reset filters for IE
+//
+// When you need to remove a gradient background, do not forget to use this to reset
+// the IE filter for IE9 and below.
+//@mixin reset-filter() {
+//  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+//}
+
+//----------------------------
+//Transitions
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -ms-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transition-timing($function...) {
+  -moz-transition-timing-function: $function;
+  -o-transition-timing-function: $function;
+  -webkit-transition-timing-function: $function;
+  transition-timing-function: $function;
+}
+
+@mixin transition-delay($transition-delay...) {
+  -webkit-transition-delay: $transition-delay;
+  -ms-transition-delay: $transition-delay;
+  transition-delay: $transition-delay;
+}
+
+@mixin transition-duration($transition-duration...) {
+  -webkit-transition-duration: $transition-duration;
+  transition-duration: $transition-duration;
+}
+
+@mixin transition-property($property) {
+  -webkit-transition-property: $property;
+  transition-property: $property;
+}
+
+@mixin transform-origin($orgin) {
+  -moz-transform-origin: $orgin;
+  -ms-transform-origin: $orgin;
+  -webkit-transform-origin: $orgin;
+  transform-origin: $orgin;
+}
+
+//----------------------------
+//Transformations
+@mixin transform-style-3d() {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+@mixin transform-style-flat() {
+  -webkit-transform-style: flat;
+  transform-style: flat;
+}
+
+
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -ms-transform: rotate($degrees); // IE9+
+  transform: rotate($degrees);
+}
+
+@mixin scale($ratio) {
+  -webkit-transform: scale($ratio);
+  -ms-transform: scale($ratio); // IE9+
+  transform: scale($ratio);
+}
+
+@mixin translate($x,$y) {
+  -webkit-transform: perspective(1px) translate($x, $y);
+  -ms-transform: translate($x, $y); // IE9+
+  transform: perspective(1px) translate($x, $y);
+}
+
+@mixin translateX($x) {
+  -webkit-transform: perspective(1px) translateX($x);
+  -ms-transform: translateX($x); // IE9+
+  transform: perspective(1px) translateX($x);
+}
+
+@mixin translateY($y) {
+  -webkit-transform: perspective(1px) translateY($y);
+  -ms-transform: translateY($y); // IE9+
+  transform: perspective(1px) translateY($y);
+}
+
+@mixin skew($x,$y) {
+  -webkit-transform: skew($x, $y);
+  -ms-transform: skewX($x) skewY($y); // See https://github.com/twbs/bootstrap/issues/4885; IE9+
+  transform: skew($x, $y);
+}
+
+@mixin translate3d($x,$y,$z) {
+  -webkit-transform: translate3d($x, $y, $z);
+  -ms-transform: translate3d($x, $y, $z);
+  transform: translate3d($x, $y, $z);
+}
+
+@mixin transform($transformation) {
+  -webkit-transform: $transformation;
+  -ms-transform: $transformation;
+  transform: $transformation;
+}
+
+@mixin transform-origin($orgin) {
+  -ms-transform-origin: $orgin;
+  -webkit-transform-origin: $orgin;
+  transform-origin: $orgin;
+}
+
+@mixin perspective($pespecrive: 80em) {
+  -moz-perspective: $pespecrive;
+  -ms-perspective: $pespecrive;
+  -webkit-perspective: $pespecrive;
+  perspective: $pespecrive;
+}
+
+@mixin perspective-origin($origin: 50% 50%) {
+  -moz-perspective-origin: $origin;
+  -ms-perspective-origin: $origin;
+  -webkit-perspective-origin: $origin;
+  perspective-origin: $origin;
+}
+
+//----------------------------
+//ANIMATION
+@mixin animation($anim...) {
+  -webkit-animation: $anim;
+  -moz-animation: $anim;
+  -o-animation: $anim;
+  animation: $anim;
+}
+
+@mixin animation-delay($time...) {
+  -webkit-animation-delay: $time;
+  -moz-animation-delay: $time;
+  -o-animation-delay: $time;
+  animation-delay: $time;
+}
+
+@mixin animation-duration($time) {
+  -moz-animation-duration: $time;
+  -o-animation-duration: $time;
+  -webkit-animation-duration: $time;
+  animation-duration: $time;
+}
+
+@mixin animation-name($name) {
+  -moz-animation-name: $name;
+  -o-animation-name: $name;
+  -webkit-animation-name: $name;
+  animation-name: $name;
+}
+
+@mixin animation-play-state($state) {
+  -moz-animation-play-state: $state;
+  -o-animation-play-state: $state;
+  -webkit-animation-play-state: $state;
+  animation-play-state: $state;
+}
+
+@mixin animation-fill-mode($mode) {
+  -moz-animation-fill-mode: $mode;
+  -o-animation-fill-mode: $mode;
+  -webkit-animation-fill-mode: $mode;
+  animation-fill-mode: $mode;
+}
+
+@mixin animation-timing-function($function) {
+  -moz-animation-timing-function: $function;
+  -o-animation-timing-function: $function;
+  -webkit-animation-timing-function: $function;
+  animation-timing-function: $function;
+}
+
+@mixin animation-direction($direction) {
+  -moz-animation-direction: $direction;
+  -o-animation-direction: $direction;
+  -webkit-animation-direction: $direction;
+  animation-direction: $direction;
+}
+
+// Text overflow
+// Requires inline-block or block for proper styling
+@mixin text-overflow() {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin user-select($value: none) {
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  -webkit-user-select: $value;
+  user-select: $value;
+}
+
+//filter
+@mixin filter($filter) {
+  -webkit-filter: $filter;
+  filter: $filter;
+}
+
+//keyframes
+@mixin keyframes( $name ) {
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin placeholder($font-size: 1em, $opacity: 0.9, $style: normal, $color: inherit) {
+  // Firefox 19+
+  &::-moz-placeholder {
+    opacity: $opacity;
+    font-size: $font-size;
+    font-weight: normal;
+    font-style: $style;
+  }
+  // Internet Explorer 10+
+  &:-ms-input-placeholder {
+    opacity: $opacity;
+    font-size: $font-size;
+    font-weight: normal;
+    font-style: $style;
+  }
+  // Safari and Chrome
+  &::-webkit-input-placeholder {
+    opacity: $opacity;
+    font-size: $font-size;
+    font-weight: normal;
+    font-style: $style;
+  }
+}
+
+@mixin flex($grow: 0, $shrink: 1, $basis: auto) {
+  -webkit-box-flex: 0;
+  -ms-flex: $grow $shrink $basis;
+  -webkit-flex: $grow $shrink $basis;
+  flex: $grow $shrink $basis;
+}
+
+@mixin flex-display() {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
+}
+
+@mixin flex-inline-display() {
+  //display: -webkit-inline-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-inline-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-inline-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-inline-flex; /* NEW - Chrome */
+  display: inline-flex;
+}
+
+/* column, row, column-reverse, row-revese */
+
+@mixin flex-direction($direction: row) {
+  -ms-flex-direction: $direction;
+  -webkit-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin flex-wrap($direction: row) {
+  -webkit-flex-wrap: $direction;
+  flex-wrap: $direction;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+  -ms-flex-pack: $justify;
+}
+
+// Packing Flex Lines
+// - applies to: multi-line flex containers
+// flex-start | flex-end | center | space-between | space-around | stretch
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+  -moz-align-content: $align;
+  -ms-align-content: $align;
+  align-content: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  align-items: $align;
+}
+
+/// Mixin to customize scrollbars
+/// Beware, this does not work in all browsers
+/// @author Hugo Giraudel
+/// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+/// @param {Color} $foreground-color - Scrollbar's color
+/// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
+/// @example scss - Scrollbar styling
+///   @include scrollbars(.5em, slategray);
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}

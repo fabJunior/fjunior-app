@@ -1,0 +1,9 @@
+{
+  "short_name": "FabJunior",
+  "name": "FabJunior - Mon site web",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
