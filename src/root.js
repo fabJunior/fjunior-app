@@ -66,7 +66,7 @@ const theme = createMuiTheme({
     }
   },
   typography: {
-    fontFamily: "Raleway",
+    fontFamily: "Pathway Gothic One",
     fontSize: 14,
     button: {
       fontFamily: "Raleway",
@@ -75,16 +75,13 @@ const theme = createMuiTheme({
       color: colors.secondary
     },
     h1: {
-      fontFamily: "Pathway Gothic One",
       fontStyle: "italic"
     },
     h2: {
-      fontFamily: "Pathway Gothic One",
       fontStyle: "italic",
       fontSize: "2.125em"
     },
     h3: {
-      fontFamily: "Pathway Gothic One",
       fontStyle: "italic",
       color: colors.activeLinkColor,
       fontSize: "1.512em"
