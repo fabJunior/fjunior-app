@@ -1,6 +1,9 @@
 @import '../functions';
 
 .HomeContainer {
+  background-size: cover;
+  background-image: linear-gradient(150deg, rgb(23 23 38), rgb(0 0 10));
+
   clip-path: unquote(generateWave());
 }
 
