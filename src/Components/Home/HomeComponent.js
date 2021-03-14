@@ -3,7 +3,6 @@ import React, { Component } from "react";
 
 import { Container } from "react-bootstrap";
 import Typography from "@material-ui/core/es/Typography";
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { Fade, Button } from '@material-ui/core';
 import { CSSTransition } from 'react-transition-group';
 import { Translate } from "react-redux-i18n";
@@ -13,42 +12,32 @@ import { colors } from "../../Styles/colors";
 import "../../Styles/Home/transitions.scss";
 import "../../Styles/Home/homeStyles.scss";
 
-function ShowOnScroll(props) {
-  const { children } = props;
-  const trigger = useScrollTrigger({threshold: 400});
-
-  return (
-    <Fade in={trigger}>
-      {children}
-    </Fade>
-  );
-}
-
-function HideOnScroll(props) {
-  const { children } = props;
-  const trigger = useScrollTrigger({threshold: 200});
-
-  return (
-    <Fade in={!trigger}>
-      {children}
-    </Fade>
-  );
-}
-
 class HomeComponent extends Component<{
   locale: string,
   setLocale: (lang: string) => void
 }> {
   state = {
-    loaded: false
+    loaded: false,
+    showArrows: true
   }
 
   componentDidMount() {
-    this.setState({loaded: true});
+    this.setState({ loaded: true });
+
+    window.addEventListener('scroll', this.handleScroll);
   }
 
   handleClick = () => {
     this.props.setLocale(this.props.locale == "fr" ? "en" : "fr");
+  }
+
+  handleScroll = () => {
+    var currentScrollPos = window.pageYOffset;
+
+    if (window.pageYOffset > 300) {
+      this.setState({ showArrows: false });
+      window.removeEventListener('scroll', this.handleScroll);
+    }
   }
 
   render() {
@@ -67,9 +56,9 @@ class HomeComponent extends Component<{
             </Container>
           </CSSTransition>
         </Container>
-        <HideOnScroll>
+        <Fade in={this.state.showArrows}>
           <div className="arrows"></div>
-        </HideOnScroll>
+        </Fade>
       </Container>
     );
   }
