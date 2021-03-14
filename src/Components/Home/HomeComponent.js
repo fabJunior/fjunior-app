@@ -47,7 +47,7 @@ class HomeComponent extends Component<{
       }}>
         <Container className="HomeContainer hInherit">
           <CSSTransition in={this.state.loaded} classNames="intro" unmountOnExit timeout={3*1000}>
-            <Container className="intro">
+            <Container className="intro flexDisplay">
               <Button variant="outlined" size="small" onClick={this.handleClick}><Translate value="switchLang" /></Button>
               <Container>
                 <Typography variant="h1">Fabien-Junior Fresse</Typography>
