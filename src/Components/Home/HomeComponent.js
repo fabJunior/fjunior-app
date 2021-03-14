@@ -54,8 +54,7 @@ class HomeComponent extends Component<{
   render() {
     return (
       <Container style={{
-        height: "125vh",
-        marginBottom: "-25vh"
+        height: "120vh"
       }}>
         <Container className="HomeContainer hInherit">
           <CSSTransition in={this.state.loaded} classNames="intro" unmountOnExit timeout={3*1000}>

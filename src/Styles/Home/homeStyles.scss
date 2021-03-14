@@ -3,18 +3,4 @@
 .HomeContainer {
   background-size: cover;
   background-image: linear-gradient(150deg, rgb(23 23 38), rgb(0 0 10));
-
-  clip-path: unquote(generateWave());
-}
-
-@media only screen and (max-width: 1200px) {
-  .HomeContainer {
-    clip-path: unquote(generateWave($frequency: 2));
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .HomeContainer {
-    clip-path: unquote(generateWave($frequency: 3));
-  }
 }

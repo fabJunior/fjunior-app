@@ -6,7 +6,7 @@
   $offset: 100;
   $units: $frequency * $width_px / 100 ;
 
-  $clipPathString: 'polygon(100% 0%, 0% 0% ';
+  $clipPathString: 'polygon(0% 100%, 100% 100% ';
 
   @for $i from 0 through 100 {
     $val: 0;
@@ -19,7 +19,7 @@
     
     $val: (math.round($val * 100)/100) / $height_px*100;
 
-    $clipPathString: $clipPathString + ', ' + $i + '% ' + $val + '%';
+    $clipPathString: $clipPathString + ', ' + (100 - $i) + '% ' + (100 - $val) + '%';
   }
 
   $clipPathString: $clipPathString + ')';

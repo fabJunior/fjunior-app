@@ -12,7 +12,7 @@ class MainContentAreaComponent extends Component {
 
   render() {
     return (
-      <div className="flexColumn hInherit">
+      <div className="MainContent flexColumn hInherit">
         <Header {...this.props} />
         <Home {...this.props} />
         <ResponsiveImage imgSrc="https://picsum.photos/2500/800" width="100%" height="800px" />

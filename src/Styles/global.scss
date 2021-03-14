@@ -4,6 +4,7 @@
 @import "mixins";
 @import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Raleway&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css");
+@import 'functions';
 
 /******************************************* GLOBALS && ROOT **********************************************************/
 /*  All components will inherit styles from these selectors (body, etc...)  */
@@ -41,6 +42,25 @@ body {
     path {
       fill: $activeLinkColor !important;
     }
+  }
+}
+
+/*************************************** MAIN COMPONENTS SPECIFICS ****************************************************/
+
+.MainContent > img {
+  margin-top: -15vh;
+  clip-path: unquote(generateWave());
+}
+
+@media only screen and (max-width: 1200px) {
+  .MainContent > img {
+    clip-path: unquote(generateWave($frequency: 2));
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .MainContent > img {
+    clip-path: unquote(generateWave($frequency: 3));
   }
 }
 
