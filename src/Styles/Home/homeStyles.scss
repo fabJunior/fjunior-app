@@ -3,4 +3,25 @@
 .HomeContainer {
   background-size: cover;
   background-image: linear-gradient(150deg, rgb(23 23 38), rgb(0 0 10));
+
+  .container.intro {
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+
+    > .container {
+      margin: auto;
+
+      .MuiTypography-h1 {
+        font-size: 6.25em;
+      }
+    }
+  }
+
+  .MuiButton-root {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+  }
 }

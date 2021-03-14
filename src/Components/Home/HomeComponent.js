@@ -58,15 +58,10 @@ class HomeComponent extends Component<{
       }}>
         <Container className="HomeContainer hInherit">
           <CSSTransition in={this.state.loaded} classNames="intro" unmountOnExit timeout={3*1000}>
-            <Container className="intro" style={{
-              textAlign: "center",
-              height: "100vh",
-              width: "100%",
-              display: "flex"
-            }}>
-              <Button variant="outlined" size="small" style={{ position: "absolute", top: "1em", right: "1em" }} onClick={this.handleClick}><Translate value="switchLang" /></Button>
-              <Container style={{ margin: "auto" }}>
-                <Typography variant="h1" style={{fontSize: "6.25em"}}>Fabien-Junior Fresse</Typography>
+            <Container className="intro">
+              <Button variant="outlined" size="small" onClick={this.handleClick}><Translate value="switchLang" /></Button>
+              <Container>
+                <Typography variant="h1">Fabien-Junior Fresse</Typography>
                 <Typography variant="h3"><Translate value="home.catchphrase" /></Typography>
               </Container>
             </Container>
