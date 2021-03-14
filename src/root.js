@@ -83,7 +83,7 @@ const theme = createMuiTheme({
     },
     h3: {
       fontStyle: "italic",
-      color: colors.activeLinkColor,
+      color: colors.secondary2,
       fontSize: "1.512em"
     },
     body1: {
