@@ -1,7 +1,6 @@
 // External
 import React from "react";
 import { Provider } from "react-redux";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 
 // Ours
@@ -101,14 +100,7 @@ const theme = createMuiTheme({
 const Root = ({ store }) => (
   <Provider store={store}>
     <MuiThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/"
-            component={App}
-            {...store}
-          />
-        </Switch>
-      </BrowserRouter>
+      <App {...store}/>
     </MuiThemeProvider>
   </Provider>
 );
