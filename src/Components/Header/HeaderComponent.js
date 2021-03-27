@@ -9,7 +9,7 @@ import { Translate } from "react-redux-i18n";
 
 function ShowOnScroll(props) {
   const { children } = props;
-  const trigger = useScrollTrigger({threshold: 400});
+  const trigger = useScrollTrigger({disableHysteresis: true, threshold: 400});
 
   return (
     <Fade in={trigger}>
