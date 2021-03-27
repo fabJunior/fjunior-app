@@ -15,7 +15,7 @@ class MainContentAreaComponent extends Component {
       <div className="MainContent flexColumn hInherit">
         <Header {...this.props} />
         <Home {...this.props} />
-        <ResponsiveImage imgSrc="https://picsum.photos/2500/800" width="100%" height="800px" />
+        <ResponsiveImage imgSrc="https://picsum.photos/3100/900?a" height="60vh" />
       </div>
     );
   }

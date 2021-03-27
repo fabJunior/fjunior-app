@@ -52,19 +52,20 @@ body {
 
 /*************************************** MAIN COMPONENTS SPECIFICS ****************************************************/
 
-.MainContent > img {
+.MainContent > .react-parallax {
   margin-top: -15vh;
   clip-path: unquote(generateWave());
+  transition: clip-path 1s ease;
 }
 
 @media only screen and (max-width: 1200px) {
-  .MainContent > img {
+  .MainContent > .react-parallax {
     clip-path: unquote(generateWave($frequency: 2));
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .MainContent > img {
+  .MainContent > .react-parallax {
     clip-path: unquote(generateWave($frequency: 3));
   }
 }
