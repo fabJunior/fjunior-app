@@ -1,6 +1,6 @@
 // Site color scheme
 export const colors = {
-	headerNavigationBackground: "#2390f6",
+	headerNavigationBackground: "#1E8EF6",
 	mainNavigationBackground: "#427DDF",
 
 	siteStatus: "#4F866D",
