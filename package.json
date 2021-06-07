@@ -35,7 +35,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && gzipper compress ./build && gzipper compress --brotli ./build",
     "build:dev": "REACT_APP_ENV=development react-scripts build",
     "build:production": "REACT_APP_ENV=production react-scripts build"
   },
@@ -56,6 +56,7 @@
     "babel-preset-flow": "^6.23.0",
     "flow": "^0.2.3",
     "flow-bin": "^0.145.0",
+    "gzipper": "^4.5.0",
     "prettier": "^2.2.1",
     "yarn-check": "^0.0.3"
   },
