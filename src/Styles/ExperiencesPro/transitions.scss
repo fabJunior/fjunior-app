@@ -1,0 +1,34 @@
+@import '../mixins.scss';
+
+.ExperiencesPro .JobEntry {
+  .NomEntreprise, .Description, hr {
+    opacity: 0;
+    @include transition(opacity 600ms, transform 600ms);
+  }
+
+  .NomEntreprise {
+    @include translateX(-200px);
+  }
+  .Description {
+    @include translateX(200px);
+  }
+
+  &:nth-of-type(2n) {
+    .NomEntreprise {
+      @include translateX(200px);
+    }
+    .Description {
+      @include translateX(-200px);
+    }
+  }
+  
+  &.slide-enter-active, &.slide-enter-done {
+    .NomEntreprise, .Description, hr {
+      opacity: 1;
+    }
+
+    .NomEntreprise, .Description {
+      @include translateX(0);
+    }
+  }
+}
