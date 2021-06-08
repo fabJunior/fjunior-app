@@ -6,9 +6,14 @@ import Header from "../Containers/Header";
 import ResponsiveImage from "../Shared/UI/responsiveImage";
 import ExperiencesPro from "../Containers/ExperiencesPro";
 
+import workBg from "../Assets/Images/work-background.jpg";
+import abstractBg from "../Assets/Images/abstract-background.jpg";
+
 class MainContentAreaComponent extends Component {
   constructor(props) {
     super(props);
+
+    console.log(workBg);
   }
 
   render() {
@@ -16,9 +21,9 @@ class MainContentAreaComponent extends Component {
       <div className="MainContent flexColumn hInherit">
         <Header {...this.props} />
         <Home {...this.props} />
-        <ResponsiveImage imgSrc="https://picsum.photos/3100/900?a" height="60vh" />
+        <ResponsiveImage imgSrc={workBg} height="60vh" imgStyle={{ minWidth: "100vw" }} />
         <ExperiencesPro {...this.props} />
-        <ResponsiveImage imgSrc="https://picsum.photos/3100/900?b" height="60vh" />
+        <ResponsiveImage imgSrc="https://picsum.photos/3100/900?b" height="60vh" imgStyle={{ minWidth: "100vw" }} />
       </div>
     );
   }
