@@ -71,14 +71,31 @@ class ExperiencesProComponent extends Component<{
 
         {/* SUPRAGAMES */}
 
-        {/*<JobEntry entreprise="SupraGames" {...this.props}>
-            <JobDescription title={ <Translate value={ "expPro.supra.0.title" } /> }>
+        <JobEntry entreprise="SupraGames" {...this.props}>
+            <JobDescription
+            title={ <Translate value={ "expPro.supra.0.title" } /> }
+            more={ <Translate value={ "expPro.supra.0.moreDescription" } dangerousHTML/> }>
               <Translate value={ "expPro.supra.0.description" } dangerousHTML/>
+
+              <Typography variant="h3"><Translate value="expPro.languagesUsed" /></Typography>
+              <Chip label="C++/Qt" />
+
+              <Typography variant="h3"><Translate value="expPro.toolsUsed" /></Typography>
+              <Chip label="GitHub" />
             </JobDescription>
-            <JobDescription title={ <Translate value={ "expPro.supra.1.title" } /> }>
+
+            <JobDescription
+            title={ <Translate value={ "expPro.supra.1.title" } /> }>
               <Translate value={ "expPro.supra.1.description" } dangerousHTML/>
+
+              <Typography variant="h3"><Translate value="expPro.languagesUsed" /></Typography>
+              <Chip label="BluePrint" />
+
+              <Typography variant="h3"><Translate value="expPro.toolsUsed" /></Typography>
+              <Chip label="GitHub" />
+              <Chip label="Trello" />
             </JobDescription>
-        </JobEntry>*/}
+        </JobEntry>
       </Container>
     );
   }
