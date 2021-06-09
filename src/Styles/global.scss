@@ -73,27 +73,23 @@ body {
 /*********************************************** CLASSES FOR MIXINS *************************************************/
 
 .flexChildStatic {
-  @include flex(1 1 0);
+  @include flex(1, 1, 0);
 }
 
 .flexChildNoResize {
-  @include flex(0 0 auto);
+  @include flex(0, 0, auto);
 }
 
 .flexChildShrink {
-  @include flex(0 1 auto);
+  @include flex(0, 1, auto);
 }
 
 .flexChildAuto {
-  @include flex(1 0 auto);
+  @include flex(1, 0, auto);
 }
 
 .flexChildFill {
-  @include flex(0 1 100%);
-}
-
-.flexSplit {
-  @include flex(1 0 49%);
+  @include flex(0, 1, 100%);
 }
 
 .flexDisplay {
@@ -147,40 +143,6 @@ body {
 .hInherit {
   height: inherit;
   min-height: inherit;
-}
-
-.hAuto {
-  height: auto;
-}
-
-.h100 {
-  height: 100%;
-}
-
-.w100 {
-  width: 100%;
-}
-
-.wFill {
-  width: 100%;
-  width: -moz-available; /* WebKit-based browsers will ignore this. */
-  width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
-  width: fill-available;
-}
-
-.overflowHidden {
-  overflow: hidden
-}
-
-.overflowYAuto {
-  overflow-y: auto;
-}
-
-.truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
 }
 
 .invert {
