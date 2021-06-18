@@ -2,7 +2,7 @@ const supra = {
   fr: [
     {
       title: "Développeur C++",
-      description: "Durant mon BTS j'ai eu la chance de rejoindre l'équipe de SupraGames en télétravail pour les aider sur le développement de leur jeu vidéo de football à la première personne “Supraball”.",
+      description: "Durant mon BTS j'ai eu la chance de rejoindre l'équipe de <a href=\"https://deathball.net/supragames/\" target=\"_blank\">SupraGames</a> en télétravail pour les aider sur le développement de leur jeu vidéo de football à la première personne “Supraball”.",
       moreDescription:"Le jeu étant publié sur la plateforme Steam, j'ai pu découvrir et implémenter les succès Steam du jeu vidéo, ce qui consistait à déterminer si le joueur avait rempli certaines conditions pour ensuite avertir la plateforme Steam qu'un succès a été accompli (par exemple, marquer 10 buts en un match).\
         <br><br>\
         J'ai aussi eu comme tâche de coordonner la traduction de l'interface du jeu. Pour cela, une liste de personnes volontaires m'a été donnée, mon objectif était de leur expliquer la méthodologie pour nous fournir leur traduction de l'interface dans leur(s) langue(s). Chaque traduction passe par plusieurs personnes pour minimiser les erreurs."
@@ -16,7 +16,7 @@ const supra = {
   en: [
     {
       title: "C++ Developer",
-      description: "While working for my Advanced Technician's Certificate, I had the chance to join SupraGames' team and help them remotely on the developement of their first person football video game called “Supraball”.",
+      description: "While working for my Advanced Technician's Certificate, I had the chance to join <a href=\"https://deathball.net/supragames/\" target=\"_blank\">SupraGames'</a> team and help them remotely on the developement of their first person football video game called “Supraball”.",
       moreDescription: "As the game has been published on Steam, I could discover and implement the game's Steam achievements, which consisted of determining if the player had met specific conditions and then notifying Steam of the corresponding achievement (for example, scoring 10 goals in a match).\
       <br><br>\
       I was also in charge of managing the translation of the game's interface. To do so, I was given a list of volunteers, my goal was to explain to them the methodology to provide us with a translation in their language(s). Each translation goes through several people to minimize mistakes."
