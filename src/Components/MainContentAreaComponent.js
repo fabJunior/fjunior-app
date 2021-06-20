@@ -10,12 +10,6 @@ import workBg from "../Assets/Images/work-background.jpg";
 import abstractBg from "../Assets/Images/abstract-background.jpg";
 
 class MainContentAreaComponent extends Component {
-  constructor(props) {
-    super(props);
-
-    console.log(workBg);
-  }
-
   render() {
     return (
       <div className="MainContent flexColumn hInherit">
