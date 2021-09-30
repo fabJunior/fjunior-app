@@ -56,8 +56,9 @@ class ExperiencesProComponent extends Component<{
 
               <Typography variant="h3"><Translate value="expPro.toolsUsed" /></Typography>
               <Chip label="Node.js" />
-              <Chip label="Git" />
               <Chip label="Webpack" />
+              <Chip label="Vue.js" />
+              <Chip label="Git" />
               <Chip label={ <Translate value="expPro.linuxServer" /> } />
               <Chip label={ <Translate value="expPro.certbot" /> } />
             </JobDescription>
