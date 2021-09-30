@@ -17,7 +17,7 @@ class ExperiencesProComponent extends Component<{
 
   render() {
     return (
-      <Container className="ExperiencesPro">
+      <Container className="ExperiencesPro section">
         <Typography variant="h1"><Translate value="expPro.title" /></Typography>
          
          {/* ROLEPLACE */}

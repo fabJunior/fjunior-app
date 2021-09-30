@@ -16,7 +16,7 @@ class PresentationComponent extends Component<{
 }> {
   render() {
     return (
-      <Container className="Presentation">
+      <Container className="Presentation section">
         <Typography variant="h1"><Translate value="presentation.title" /></Typography>
         <Container className="flexDisplay">
           <Container className="flexChildStatic gauche box">
