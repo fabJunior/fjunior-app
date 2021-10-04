@@ -19,7 +19,7 @@ class JobDescriptionComponent extends Component<{
   }
 
   handleExpandClick = () => {
-    this.setState({ expand: true });
+    this.setState({ expand: !this.state.expand });
   }
 
   render() {
@@ -37,6 +37,10 @@ class JobDescriptionComponent extends Component<{
         <Collapse in={this.state.expand}>
           <hr />
           <Typography variant="body1">{ this.props.more }</Typography>
+
+          <Container className="LearnMore">
+            <Button variant="outlined" size="medium" color="primary" onClick={this.handleExpandClick}><Translate value="expPro.less" />...</Button>
+          </Container>
         </Collapse>
       </Container>
     );
