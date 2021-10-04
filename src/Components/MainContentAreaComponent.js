@@ -16,11 +16,11 @@ class MainContentAreaComponent extends Component {
       <div className="MainContent flexColumn hInherit">
         <Header {...this.props} />
         <Home {...this.props} />
-        <ParallaxImage imgSrc={abstractBg} height="60vh" imgStyle={{ minWidth: "100vw" }} />
+        <ParallaxImage imgSrc={abstractBg} />
         <Presentation />
-        <ParallaxImage imgSrc={workBg} height="60vh" imgStyle={{ minWidth: "100vw" }} />
+        <ParallaxImage imgSrc={workBg} />
         <ExperiencesPro {...this.props} />
-        <ParallaxImage imgSrc="https://picsum.photos/3100/900?b" height="60vh" imgStyle={{ minWidth: "100vw" }} />
+        <ParallaxImage imgSrc="https://picsum.photos/3100/900?b" />
       </div>
     );
   }

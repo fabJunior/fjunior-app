@@ -52,10 +52,14 @@ body {
 
 /*************************************** MAIN COMPONENTS SPECIFICS ****************************************************/
 
-.MainContent > .react-parallax {
+.MainContent .react-parallax {
   margin-top: -15vh;
   clip-path: unquote(generateWave());
   transition: clip-path 1s ease;
+
+  img {
+    min-width: 100vw;
+  }
 }
 
 .MainContent .container.section {
@@ -69,13 +73,13 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
-  .MainContent > .react-parallax {
+  .MainContent .react-parallax {
     clip-path: unquote(generateWave($frequency: 2));
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .MainContent > .react-parallax {
+  .MainContent .react-parallax {
     clip-path: unquote(generateWave($frequency: 3));
   }
 }
