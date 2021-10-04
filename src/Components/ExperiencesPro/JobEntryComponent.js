@@ -8,9 +8,11 @@ import { CSSTransition } from "react-transition-group";
 // Ours
 import "../../Styles/ExperiencesPro/transitions.scss";
 import VisibilitySensor from "../../Shared/UI/visibilitySensor";
+import ParallaxImage from "../../Shared/UI/parallaxImage";
 
 class JobEntryComponent extends Component<{
   entreprise: string,
+  imgSrc: string,
 }> {
 
   render() {
@@ -25,6 +27,8 @@ class JobEntryComponent extends Component<{
               </Container>
 
               { this.props.children }
+
+              { this.props.imgSrc && <ParallaxImage imgSrc={this.props.imgSrc} />}
 
               <hr/>
 

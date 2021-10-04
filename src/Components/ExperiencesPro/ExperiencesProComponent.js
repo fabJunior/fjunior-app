@@ -11,6 +11,9 @@ import { TextareaAutosize } from '@material-ui/core';
 import JobEntry from "./JobEntryComponent";
 import JobDescription from "./JobDescriptionComponent";
 import "../../Styles/ExperiencesPro/experiencesProStyles.scss";
+import imageBleu from "../../Assets/Images/bleubanquise.jpg";
+import imageRpl from "../../Assets/Images/roleplace.jpg";
+import imageSupra from "../../Assets/Images/supraland.jpg";
 
 class ExperiencesProComponent extends Component<{
 }> {
@@ -22,45 +25,53 @@ class ExperiencesProComponent extends Component<{
          
          {/* ROLEPLACE */}
 
-        <JobEntry entreprise="RolePlace" l10nKey="rpl" {...this.props}>
+        <JobEntry entreprise="RolePlace" imgSrc={imageRpl} {...this.props}>
             <JobDescription
               title={ <Translate value={ "expPro.rpl.title" } /> }
               more={ <Translate value={ "expPro.rpl.moreDescription" } dangerousHTML/> }>
               <Translate value={ "expPro.rpl.description" } dangerousHTML/>
 
               <Typography variant="h3"><Translate value="expPro.languagesUsed" /></Typography>
-              <Chip label="HTML" />
-              <Chip label="SCSS" />
-              <Chip label="Javascript" />
+              <Container className="chips-container">
+                <Chip label="HTML" />
+                <Chip label="SCSS" />
+                <Chip label="Javascript" />
+              </Container>
 
               <Typography variant="h3"><Translate value="expPro.toolsUsed" /></Typography>
-              <Chip label="React" />
-              <Chip label="Mocha" />
-              <Chip label="GitLab" />
+              <Container className="chips-container">
+                <Chip label="React" />
+                <Chip label="Mocha" />
+                <Chip label="GitLab" />
+              </Container>
             </JobDescription>
         </JobEntry>
 
         {/* BLEU BANQUISE */}
 
-        <JobEntry entreprise="Bleu Banquise" {...this.props}>
+        <JobEntry entreprise="Bleu Banquise" imgSrc={imageBleu} {...this.props}>
             <JobDescription
             title={ <Translate value={ "expPro.bb.0.title" } /> }
             more={ <Translate value={ "expPro.bb.0.moreDescription" } dangerousHTML/> }>
               <Translate value={ "expPro.bb.0.description" } dangerousHTML/>
 
               <Typography variant="h3"><Translate value="expPro.languagesUsed" /></Typography>
-              <Chip label="HTML" />
-              <Chip label="SCSS" />
-              <Chip label="Javascript" />
-              <Chip label="MySQL" />
+              <Container className="chips-container">
+                <Chip label="HTML" />
+                <Chip label="SCSS" />
+                <Chip label="Javascript" />
+                <Chip label="MySQL" />
+              </Container>
 
               <Typography variant="h3"><Translate value="expPro.toolsUsed" /></Typography>
-              <Chip label="Node.js" />
-              <Chip label="Webpack" />
-              <Chip label="Vue.js" />
-              <Chip label="Git" />
-              <Chip label={ <Translate value="expPro.linuxServer" /> } />
-              <Chip label={ <Translate value="expPro.certbot" /> } />
+              <Container className="chips-container">
+                <Chip label="Node.js" />
+                <Chip label="Webpack" />
+                <Chip label="Vue.js" />
+                <Chip label="Git" />
+                <Chip label={ <Translate value="expPro.linuxServer" /> } />
+                <Chip label={ <Translate value="expPro.certbot" /> } />
+              </Container>
             </JobDescription>
 
             <JobDescription
@@ -72,17 +83,21 @@ class ExperiencesProComponent extends Component<{
 
         {/* SUPRAGAMES */}
 
-        <JobEntry entreprise="SupraGames" {...this.props}>
+        <JobEntry entreprise="SupraGames" imgSrc={imageSupra} {...this.props}>
             <JobDescription
             title={ <Translate value={ "expPro.supra.0.title" } /> }
             more={ <Translate value={ "expPro.supra.0.moreDescription" } dangerousHTML/> }>
               <Translate value={ "expPro.supra.0.description" } dangerousHTML/>
 
               <Typography variant="h3"><Translate value="expPro.languagesUsed" /></Typography>
-              <Chip label="C++/Qt" />
+              <Container className="chips-container">
+                <Chip label="C++/Qt" />
+              </Container>
 
               <Typography variant="h3"><Translate value="expPro.toolsUsed" /></Typography>
-              <Chip label="GitHub" />
+              <Container className="chips-container">
+                <Chip label="GitHub" />
+              </Container>
             </JobDescription>
 
             <JobDescription
@@ -90,11 +105,15 @@ class ExperiencesProComponent extends Component<{
               <Translate value={ "expPro.supra.1.description" } dangerousHTML/>
 
               <Typography variant="h3"><Translate value="expPro.languagesUsed" /></Typography>
-              <Chip label="BluePrint" />
+              <Container className="chips-container">
+                <Chip label="BluePrint" />
+              </Container>
 
               <Typography variant="h3"><Translate value="expPro.toolsUsed" /></Typography>
-              <Chip label="GitHub" />
-              <Chip label="Trello" />
+              <Container className="chips-container">
+                <Chip label="GitHub" />
+                <Chip label="Trello" />
+              </Container>
             </JobDescription>
         </JobEntry>
       </Container>

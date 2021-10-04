@@ -35,6 +35,10 @@
       margin-bottom: 25px;
     }
 
+    .chips-container {
+      line-height: 3rem;
+    }
+    
     .MuiChip-root {
       font-size: 1.1em;
       color: white;
@@ -93,15 +97,16 @@
     }
   }
 
-  .JobEntry:last-of-type hr {
-    display: none
-  }
-
   hr {
     width: 80%;
     margin: 40px 10%;
     box-shadow: black 5px 5px 10px 0;
     border-color: $secondary;
+  }
+
+  .JobEntry .react-parallax {
+    margin-top: 0;
+    margin-left: -5.5%;
   }
 }
 
