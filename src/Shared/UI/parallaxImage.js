@@ -1,7 +1,7 @@
 import React from "react";
 import { Parallax, Background } from 'react-parallax';
 
-class ResponsiveImage extends React.Component<{
+class ParallaxImage extends React.Component<{
   height: string,
   width: string,
   imgSrc: string,
@@ -43,4 +43,4 @@ class ResponsiveImage extends React.Component<{
   }
 }
 
-export default ResponsiveImage;
+export default ParallaxImage;

@@ -8,7 +8,6 @@ import Chip from "@material-ui/core/Chip";
 
 // Ours
 import "../../Styles/Presentation/presentationStyles.scss";
-import ResponsiveImage from "../../Shared/UI/responsiveImage";
 import codinGameLogo from "../../Assets/Images/codingame.svg";
 import github from "../../Assets/Images/github.svg";
 
