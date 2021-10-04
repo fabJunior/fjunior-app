@@ -25,7 +25,7 @@ export const colors = {
 	mainGrey: "#DDE0E4",
 
 	scrollBarThumb: "#382F5A",
-	scrollBackground: "#17141F"
+	scrollBackground: "#372d53"
 
 
 };
