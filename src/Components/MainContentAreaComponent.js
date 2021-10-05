@@ -20,7 +20,6 @@ class MainContentAreaComponent extends Component {
         <Presentation />
         <ParallaxImage imgSrc={workBg} />
         <ExperiencesPro {...this.props} />
-        <ParallaxImage imgSrc="https://picsum.photos/3100/900?b" />
       </div>
     );
   }
