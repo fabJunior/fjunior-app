@@ -8,7 +8,8 @@ const translations = {
       catchphrase: "Aspirant développeur web"
     },
     expPro: expPro.fr,
-    presentation: presentation.fr
+    presentation: presentation.fr,
+    moreLater: "Plus de contenu à venir..."
   },
   en: {
     switchLang: "Version française",
@@ -16,7 +17,8 @@ const translations = {
       catchphrase: "Aspiring web developer"
     },
     expPro: expPro.en,
-    presentation: presentation.en
+    presentation: presentation.en,
+    moreLater: "More content to come..."
   }
 };
 
