@@ -62,25 +62,25 @@ class HomeComponent extends Component<{
               <Container className="floats">
                 <Parallax
                   style={{ position: "absolute", inset: "0" }}
-                  bgStyle={{ left: "90%", top: "90%", filter: "blur(4px)" }}
+                  bgStyle={{ left: "90%", top: "110%", filter: "blur(4px)" }}
                   strength={-500}
                 >
                   <Background>
-                    <img width="400px" src={dots} />
+                    <img width="300px" src={dots} />
                   </Background>
                 </Parallax>
                 <Parallax
                   style={{ position: "absolute", inset: "0" }}
-                  bgStyle={{ left: "20%", top: "30%"}}
-                  strength={-300}
+                  bgStyle={{ left: "20%", top: "20%"}}
+                  strength={-150}
                 >
                   <Background>
-                    <img width="200px" src={lines} />
+                    <img width="180px" src={lines} />
                   </Background>
                 </Parallax>
                 <Parallax
                   style={{ position: "absolute", inset: "0" }}
-                  bgStyle={{ left: "10%", top: "80%", filter: "blur(4px)" }}
+                  bgStyle={{ left: "10%", top: "115%", filter: "blur(4px)" }}
                   strength={-500}
                 >
                   <Background>
@@ -90,28 +90,28 @@ class HomeComponent extends Component<{
                 <Parallax
                   style={{ position: "absolute", inset: "0" }}
                   bgStyle={{ left: "35%", top: "90%" }}
-                  strength={-200}
+                  strength={-150}
                 >
                   <Background>
-                    <img width="300px" src={wave} />
+                    <img width="200px" src={wave} />
                   </Background>
                 </Parallax>
                 <Parallax
                   style={{ position: "absolute", inset: "0" }}
                   bgStyle={{ left: "70%", top: "30%" }}
-                  strength={-300}
+                  strength={-150}
                 >
                   <Background>
-                    <img width="150px" src={losange} />
+                    <img width="120px" src={losange} />
                   </Background>
                 </Parallax>
                 <Parallax
                   style={{ position: "absolute", inset: "0" }}
-                  bgStyle={{ left: "5%", top: "80%", filter: "blur(4px)" }}
+                  bgStyle={{ left: "10%", top: "70%", filter: "blur(4px)" }}
                   strength={-500}
                 >
                   <Background>
-                    <img width="80px" src={losange} />
+                    <img width="300px" src={losange} />
                   </Background>
                 </Parallax>
               </Container>

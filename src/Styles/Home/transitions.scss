@@ -38,12 +38,14 @@
     overflow: hidden visible;
     inset: 0px;
 
+    --scale: 1;
+
     @for $i from 1 through 6 {
       .react-parallax:nth-of-type(#{$i}) .react-parallax-background {
         @include animation(float-#{$i} 30s -1*random(100)/10+s ease infinite alternate);
 
         img:hover {
-          @include transform(rotate(-60 + random(120) + deg) scale(1.3));
+          @include transform(rotate(-60 + random(120) + deg) scale(calc(1.3 * var(--scale))));
         }
       }
 
@@ -57,24 +59,44 @@
     }
 
     .react-parallax:nth-of-type(6) .react-parallax-background img {
-      @include rotate(-20deg);
+      @include transform(rotate(-20deg) scale(var(--scale)));
     }
 
     .react-parallax:nth-of-type(4) .react-parallax-background img {
-      @include rotate(20deg);
+      @include transform(rotate(20deg) scale(var(--scale)));
     }
 
     .react-parallax {
       pointer-events: none;
 
       .react-parallax-background {
+        @include scale(var(--scale));
         pointer-events: all;
       }
     }
 
     .react-parallax .react-parallax-background img {
-      @include transform(rotate(0deg) scale(1));
+      @include transform(rotate(0deg) scale(var(--scale)));
       @include transition(200ms ease);
+    }
+
+    @media only screen and (min-width: 2000px) {
+      --scale: 1.2;
+    }
+
+    @media only screen and (max-width: 1450px) {
+      --scale: 0.7;
+    }
+
+    @media only screen and (max-width: 800px) {
+      --scale: 0.5;
+    }
+
+    @media only screen and (max-width: 1300px) {
+      .react-parallax:nth-of-type(1),
+      .react-parallax:nth-of-type(3) {
+        opacity: 0.2;
+      }
     }
   }
 }
