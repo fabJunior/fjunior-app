@@ -10,7 +10,7 @@ const presentation = {
     },
     like: {
       title: "J'aime",
-      list: ["Jeux vidéos", "Découvrir/Apprendre", "Rubik's Cube", "Puzzles/Énigmes", "YouTube", "Philosophie", "Science", "Rhétorique", "Magie"]
+      list: ["Jeux vidéos", "Découvrir/Apprendre", "Rubik's Cube", "Puzzles/Énigmes", "Philosophie", "Science", "Rhétorique", "Magie"]
     },
     dislike: {
       title: "Je n'aime pas",
@@ -33,7 +33,7 @@ const presentation = {
     },
     like: {
       title: "Likes",
-      list: ["Video games", "Discover/Lean", "Rubik's Cube", "Puzzles/Enigmas", "YouTube", "Philosophy", "Science", "Rhetoric", "Magic"]
+      list: ["Video games", "Discover/Lean", "Rubik's Cube", "Puzzles/Enigmas", "Philosophy", "Science", "Rhetoric", "Magic"]
     },
     dislike: {
       title: "Dislikes",
