@@ -48,11 +48,11 @@ class PresentationComponent extends Component<{
           <Typography variant="h3"><Translate value="presentation.links.title"/></Typography>
           <Typography variant="body1">
             <Container className="flexDisplay">
-              <a href="https://www.codingame.com/profile/c75f718d581ee2fb8f870e31162208994977641" target="_blank"><Translate value="presentation.links.codingame"/></a>
+              <a href="https://www.codingame.com/profile/c75f718d581ee2fb8f870e31162208994977641" target="_blank" rel="noopener noreferrer"><Translate value="presentation.links.codingame"/></a>
               <img src={codinGameLogo} />
              </Container>
             <Container className="flexDisplay">
-              <a href="https://github.com/fabJunior/fjunior-app" target="_blank"><Translate value="presentation.links.github"/></a>
+              <a href="https://github.com/fabJunior/fjunior-app" target="_blank" rel="noopener noreferrer"><Translate value="presentation.links.github"/></a>
               <img src={github} />
             </Container>
           </Typography>

@@ -2,7 +2,7 @@ const bb = {
   fr: [
     {
       title: "Développeur Full-Stack",
-      description: "<a href=\"https://bleubanquise.com/\" target=\"_blank\">Bleu Banquise</a> est une entreprise d'infographie proposant historiquement des solutions de design graphique de packaging, affiches événementielles et publicités.<br>\
+      description: "<a href=\"https://bleubanquise.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Bleu Banquise</a> est une entreprise d'infographie proposant historiquement des solutions de design graphique de packaging, affiches événementielles et publicités.<br>\
         <br>\
         Au sein des manchots, ma mission fut de créer un site web permettant à mon entreprise d'avoir un meilleur suivi et vue d'ensemble de ses dossiers (appelé un Workflow). Via ce site web, les clients de Bleu Banquise font leurs demandes, échangent avec les infographistes, comparent les différentes versions des artworks créées, valident la version finale et consultent leurs dossiers archivés.",
       moreDescription: "Créant la partie visible du site web (Front-End) et toute la logique de cet outil (Back-End), il m'a fallu affiner d'avantage mes connaissances en cybersécurité, spécifiquement la sécurité autour des attaques possibles sur le net.<br>\
@@ -28,7 +28,7 @@ const bb = {
   en: [
     {
       title: "Full-Stack Developer",
-      description: "<a href=\"https://bleubanquise.com/en/\" target=\"_blank\">Bleu Banquise</a> is a graphics design company with a history of providing graphic design solutions for packaging, event publishing, and public advertisements.<br>\
+      description: "<a href=\"https://bleubanquise.com/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Bleu Banquise</a> is a graphics design company with a history of providing graphic design solutions for packaging, event publishing, and public advertisements.<br>\
       <br>\
       Among the penguins, my mission was to create a tool allowing my company to have a better follow-up and overview of their folders. This tool is a website through which Bleu Banquise's clients make their requests, chat with the graphic designers, compare one version of the artwork with another, validate the final version and consult their archived folders.",
       moreDescription: "As I created the visible side of the website (Front-End) and the whole logic of this tool (Back-End), I had to fine-tune my knowledge in cybersecurity, especially web-security.<br>\

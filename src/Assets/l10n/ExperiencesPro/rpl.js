@@ -1,7 +1,7 @@
 const rpl = {
   fr: {
     title: "Développeur Front-End",
-    description: "Sur mon temps libre j'aide <a href=\"https://www.roleplace.com/\" target=\"_blank\">Roleplace LLC</a> à développer leur site web orienté vers les jeux de rôles, une application complexe de chat en ligne.<br>\
+    description: "Sur mon temps libre j'aide <a href=\"https://www.roleplace.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Roleplace LLC</a> à développer leur site web orienté vers les jeux de rôles, une application complexe de chat en ligne.<br>\
       <br>\
       Mes contributions:<br>\
       <ul><li>Tests unitaires API REST</li>\
@@ -13,7 +13,7 @@ const rpl = {
   },
   en: {
     title: "Front-End Developer",
-    description: "On my free time I'm helping <a href=\"https://www.roleplace.com/\" target=\"_blank\">Roleplace LLC</a> to develop their roleplay focused website, a complex chat-based application with customizable HTML/CSS/JS profiles and user-created content.<br>\
+    description: "On my free time I'm helping <a href=\"https://www.roleplace.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Roleplace LLC</a> to develop their roleplay focused website, a complex chat-based application with customizable HTML/CSS/JS profiles and user-created content.<br>\
       <br>\
       My contributions:<br>\
       <ul><li>Unit tests for REST API</li>\
