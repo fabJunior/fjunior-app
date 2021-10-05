@@ -1,33 +1,80 @@
 @import '../mixins.scss';
 
-.container.intro {
-  .MuiButton-outlined {
-    opacity: 0;
-    @include transition(opacity 400ms 600ms);
-  }
+.HomeContainer {
+  .container.intro {
+    .MuiButton-outlined {
+      opacity: 0;
+      @include transition(opacity 400ms 600ms);
+    }
 
-  .MuiTypography-h1 {
-    opacity: 0;
-    @include transition(opacity 600ms 300ms);
-  }
-
-  .MuiTypography-h3 {
-    opacity: 0;
-    height: 0;
-    @include transition(opacity 400ms 1000ms, height 400ms 1000ms);
-  }
-
-  &.intro-enter-active, &.intro-enter-done {
-    .MuiTypography-h1, .MuiTypography-h3 {
-      opacity: 1;
+    .MuiTypography-h1 {
+      opacity: 0;
+      @include transition(opacity 600ms 300ms);
     }
 
     .MuiTypography-h3 {
-      height: 2rem;
+      opacity: 0;
+      height: 0;
+      @include transition(opacity 400ms 1000ms, height 400ms 1000ms);
     }
 
-    .MuiButton-outlined {
-      opacity: 1;
+    &.intro-enter-active, &.intro-enter-done {
+      .MuiTypography-h1, .MuiTypography-h3 {
+        opacity: 1;
+      }
+
+      .MuiTypography-h3 {
+        height: 2rem;
+      }
+
+      .MuiButton-outlined {
+        opacity: 1;
+      }
+    }
+  }
+
+  .floats {
+    position: absolute;
+    overflow: hidden visible;
+    inset: 0px;
+
+    @for $i from 1 through 6 {
+      .react-parallax:nth-of-type(#{$i}) .react-parallax-background {
+        @include animation(float-#{$i} 30s -1*random(100)/10+s ease infinite alternate);
+
+        img:hover {
+          @include transform(rotate(-60 + random(120) + deg) scale(1.3));
+        }
+      }
+
+      @keyframes float-#{$i} {
+        0%   {@include translate_rotate(-30+random(60) + px, -30+random(60) + px, +5 - random(10) + deg);}
+        25%  {@include translate_rotate(-30+random(60) + px, -30+random(60) + px, +5 - random(10) + deg);}
+        50%  {@include translate_rotate(-30+random(60) + px, -30+random(60) + px, +5 - random(10) + deg);}
+        75%  {@include translate_rotate(-30+random(60) + px, -30+random(60) + px, +5 - random(10) + deg);}
+        100% {@include translate_rotate(-30+random(60) + px, -30+random(60) + px, +5 - random(10) + deg);}
+      }
+    }
+
+    .react-parallax:nth-of-type(6) .react-parallax-background img {
+      @include rotate(-20deg);
+    }
+
+    .react-parallax:nth-of-type(4) .react-parallax-background img {
+      @include rotate(20deg);
+    }
+
+    .react-parallax {
+      pointer-events: none;
+
+      .react-parallax-background {
+        pointer-events: all;
+      }
+    }
+
+    .react-parallax .react-parallax-background img {
+      @include transform(rotate(0deg) scale(1));
+      @include transition(200ms ease);
     }
   }
 }

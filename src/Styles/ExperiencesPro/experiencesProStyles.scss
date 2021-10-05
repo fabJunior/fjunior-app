@@ -1,4 +1,5 @@
 @import '../colors';
+@import '../functions';
 
 .ExperiencesPro {
   .NomEntreprise {
@@ -104,9 +105,26 @@
     border-color: $secondary;
   }
 
-  .JobEntry .react-parallax {
-    margin-top: 0;
+  .react-parallax {
     margin-left: -5.5%;
+    clip-path: unquote(generateWave());
+    transition: clip-path 1s ease;
+
+    img {
+      min-width: 100vw;
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .react-parallax {
+      clip-path: unquote(generateWave($frequency: 2));
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .react-parallax {
+      clip-path: unquote(generateWave($frequency: 3));
+    }
   }
 }
 
