@@ -16,7 +16,8 @@ class ParallaxImage extends React.Component<{
 
     this.styles = Object.assign({
       height: this.props.height || "60vh",
-      width: this.props.width || "100vw"
+      width: this.props.width || "100%",
+      minWidth: "100vw"
     }, (this.props.containerStyle || {}));
 
     if (this.props.maxHeight) {
