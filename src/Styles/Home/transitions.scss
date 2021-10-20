@@ -35,7 +35,8 @@
 
   .floats {
     position: absolute;
-    overflow-x: clip;
+    overflow: hidden;
+    overflow: clip visible;
     inset: 0px;
 
     --scale: 1;
