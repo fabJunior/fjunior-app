@@ -35,12 +35,12 @@
 
   .floats {
     position: absolute;
-    overflow: hidden visible;
+    overflow-x: clip;
     inset: 0px;
 
     --scale: 1;
 
-    @for $i from 1 through 6 {
+    @for $i from 1 through 7 {
       .react-parallax:nth-of-type(#{$i}) .react-parallax-background {
         @include animation(float-#{$i} 30s -1*random(100)/10+s ease infinite alternate);
 
@@ -58,6 +58,10 @@
       }
     }
 
+    .react-parallax:nth-of-type(7) .react-parallax-background img {
+      @include transform(rotate(-20deg) scale(var(--scale)));
+    }
+
     .react-parallax:nth-of-type(6) .react-parallax-background img {
       @include transform(rotate(-20deg) scale(var(--scale)));
     }
@@ -68,10 +72,11 @@
 
     .react-parallax {
       pointer-events: none;
+      user-select:none;
 
       .react-parallax-background {
-        @include scale(var(--scale));
         pointer-events: all;
+        cursor: pointer;
       }
     }
 
@@ -92,11 +97,13 @@
       --scale: 0.5;
     }
 
-    @media only screen and (max-width: 1300px) {
-      .react-parallax:nth-of-type(1),
-      .react-parallax:nth-of-type(3) {
-        opacity: 0.2;
-      }
+    particle {
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0;
     }
   }
 }

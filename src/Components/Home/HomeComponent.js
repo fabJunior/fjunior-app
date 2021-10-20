@@ -45,6 +45,65 @@ class HomeComponent extends Component<{
     }
   }
 
+  animateFloat = (e) => {
+    e.target.parentNode.animate([{transform: "scale(1)"}, {transform: "scale(.8)"}, {transform: "scale(1)"}], {duration: 250, easing: "cubic-bezier(.54, 0, .32, 1.34)"});
+
+    for (let i = 0; i < 30; i++) {
+      // We call the function createParticle 30 times
+      // As we need the coordinates of the mouse, we pass them as arguments
+      this.createParticle(e.pageX, e.pageY);
+    }
+  }
+
+  createParticle = (x, y) => {
+    const particle = document.createElement('particle');
+    document.body.querySelector(".floats").appendChild(particle);
+
+    // Calculate a random size from 5px to 25px
+    const size = Math.floor(Math.random() * 20 + 5);
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    // Generate a random color
+    particle.style.background = `hsl(${Math.random() * 90 + 110}, 60%, 50%)`;
+
+    // Generate a random x & y destination within a distance of 200px from the mouse
+    let tempX, tempY;
+
+    // Restrict the x and y coordinates in a circle using the pythagorean theorem
+    while (tempX == undefined || tempX**2 + tempY**2 > 200**2) {
+      tempX = (Math.random() - 0.5) * 2 * 200;
+      tempY = (Math.random() - 0.5) * 2 * 200;
+    }
+
+    const destinationX = x + tempX;
+    const destinationY = y + tempY;
+
+    // Store the animation in a variable as we will need it later
+    const animation = particle.animate([
+    {
+      // Set the origin position of the particle
+      // We offset the particle with half its size to center it around the mouse
+      transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
+      opacity: 1
+    },
+    {
+      // We define the final coordinates as the second keyframe
+      transform: `translate(${destinationX}px, ${destinationY}px)`,
+      opacity: 0
+    }
+    ], {
+      // Set a random duration from 500 to 1500ms
+      duration: Math.random() * 1000 + 500,
+      easing: 'cubic-bezier(0, .9, .57, 1)',
+      delay: Math.random() * 150
+    });
+
+    // When the animation is complete, remove the element from the DOM
+    animation.onfinish = () => {
+      particle.remove();
+    };
+  }
+
   render() {
     return (
       <Container style={{
@@ -61,57 +120,66 @@ class HomeComponent extends Component<{
 
               <Container className="floats">
                 <Parallax
-                  style={{ position: "absolute", inset: "0" }}
-                  bgStyle={{ left: "90%", top: "110%", filter: "blur(4px)" }}
-                  strength={-500}
-                >
-                  <Background>
-                    <img width="300px" src={dots} />
-                  </Background>
-                </Parallax>
-                <Parallax
-                  style={{ position: "absolute", inset: "0" }}
-                  bgStyle={{ left: "20%", top: "20%"}}
+                  style={{ position: "absolute", inset: "0", opacity: "0.2" }}
+                  bgStyle={{ left: "90%", top: "40%", filter: "blur(4px)" }}
                   strength={-150}
                 >
                   <Background>
-                    <img width="180px" src={lines} />
+                    <div className="wrapper"><img width="300px" draggable="false" src={dots} onClick={this.animateFloat} /></div>
                   </Background>
                 </Parallax>
                 <Parallax
                   style={{ position: "absolute", inset: "0" }}
-                  bgStyle={{ left: "10%", top: "115%", filter: "blur(4px)" }}
-                  strength={-500}
+                  bgStyle={{ left: "20%", top: "30%"}}
+                  strength={-300}
                 >
                   <Background>
-                    <img width="300px" src={wave} />
+                    <div className="wrapper"><img width="180px" draggable="false" src={lines} onClick={this.animateFloat} /></div>
+                  </Background>
+                </Parallax>
+                <Parallax
+                  style={{ position: "absolute", inset: "0", opacity: "0.2" }}
+                  bgStyle={{ left: "10%", top: "80%", filter: "blur(4px)" }}
+                  strength={-150}
+                >
+                  <Background>
+                    <div className="wrapper"><img width="300px" draggable="false" src={wave} onClick={this.animateFloat} /></div>
                   </Background>
                 </Parallax>
                 <Parallax
                   style={{ position: "absolute", inset: "0" }}
                   bgStyle={{ left: "35%", top: "90%" }}
-                  strength={-150}
+                  strength={-200}
                 >
                   <Background>
-                    <img width="200px" src={wave} />
+                    <div className="wrapper"><img width="200px" draggable="false" src={wave} onClick={this.animateFloat} /></div>
                   </Background>
                 </Parallax>
                 <Parallax
                   style={{ position: "absolute", inset: "0" }}
                   bgStyle={{ left: "70%", top: "30%" }}
+                  strength={-300}
+                >
+                  <Background>
+                    <div className="wrapper"><img width="120px" draggable="false" src={losange} onClick={this.animateFloat} /></div>
+                  </Background>
+                </Parallax>
+                <Parallax
+                  style={{ position: "absolute", inset: "0", opacity: "0.2" }}
+                  bgStyle={{ left: "10%", top: "50%", filter: "blur(4px)" }}
                   strength={-150}
                 >
                   <Background>
-                    <img width="120px" src={losange} />
+                    <div className="wrapper"><img width="300px" draggable="false" src={losange} onClick={this.animateFloat} /></div>
                   </Background>
                 </Parallax>
                 <Parallax
                   style={{ position: "absolute", inset: "0" }}
-                  bgStyle={{ left: "10%", top: "70%", filter: "blur(4px)" }}
-                  strength={-500}
+                  bgStyle={{ left: "90%", top: "100%" }}
+                  strength={-300}
                 >
                   <Background>
-                    <img width="300px" src={losange} />
+                    <div className="wrapper"><img width="200px" draggable="false" src={losange} onClick={this.animateFloat} /></div>
                   </Background>
                 </Parallax>
               </Container>
