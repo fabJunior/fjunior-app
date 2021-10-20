@@ -10,8 +10,8 @@ import ParallaxImage from "../Shared/UI/parallaxImage";
 import Presentation from "../Containers/Presentation";
 import ExperiencesPro from "../Containers/ExperiencesPro";
 
-import workBg from "../Assets/Images/work-background.jpg";
-import abstractBg from "../Assets/Images/abstract-background.jpg";
+import workBg from "../Assets/Images/work-background.webp";
+import abstractBg from "../Assets/Images/abstract-background.webp";
 
 class MainContentAreaComponent extends Component {
   render() {

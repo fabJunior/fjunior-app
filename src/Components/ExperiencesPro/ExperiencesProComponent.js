@@ -11,9 +11,9 @@ import { TextareaAutosize } from '@material-ui/core';
 import JobEntry from "./JobEntryComponent";
 import JobDescription from "./JobDescriptionComponent";
 import "../../Styles/ExperiencesPro/experiencesProStyles.scss";
-import imageBleu from "../../Assets/Images/bleubanquise.jpg";
-import imageRpl from "../../Assets/Images/roleplace.jpg";
-import imageSupra from "../../Assets/Images/supraland.jpg";
+import imageBleu from "../../Assets/Images/bleubanquise.webp";
+import imageRpl from "../../Assets/Images/roleplace.webp";
+import imageSupra from "../../Assets/Images/supraland.webp";
 
 class ExperiencesProComponent extends Component<{
 }> {
@@ -28,6 +28,7 @@ class ExperiencesProComponent extends Component<{
         <JobEntry entreprise="RolePlace" imgSrc={imageRpl} {...this.props}>
             <JobDescription
               title={ <Translate value={ "expPro.rpl.title" } /> }
+              dates={ <Translate value={ "expPro.rpl.dates" } /> }
               more={ <Translate value={ "expPro.rpl.moreDescription" } dangerousHTML/> }>
               <Translate value={ "expPro.rpl.description" } dangerousHTML/>
 
