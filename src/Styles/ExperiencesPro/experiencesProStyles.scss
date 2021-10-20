@@ -5,18 +5,18 @@
   margin-bottom: 0!important;
   
   .NomEntreprise {
-    margin-right: auto;
-    padding: 0.5em 6em 0.5em 0.5em;
+    margin-left: auto;
+    padding: 0.5em 0.5em 0.5em 6em;
     display: inline-block;
     border-radius: 3px;
-    background-color: $secondary3;
-    mask-image: linear-gradient(to right, white 60%, rgba(0,0,0,0.45) 80%, transparent);
+    background-color: $primary3;
+    mask-image: linear-gradient(to left, white 60%, rgba(0,0,0,0.45) 80%, transparent);
   }
 
   .Description {
-    margin-left: auto;
+    margin-right: auto;
     margin-top: 25px;
-    border: $secondary3 1px solid;
+    border: $primary 1px solid;
     padding: 10px;
     border-radius: 3px;
     box-shadow: rgba(black, 60%) 5px 5px 20px 0px;
@@ -25,7 +25,7 @@
     transition: max-width 600ms;
 
     .MuiTypography-h3 {
-      color: $secondary3;
+      color: $primary;
 
       &:not(:first-child) {
         margin-top: 0.5em;
@@ -45,7 +45,7 @@
     .MuiChip-root {
       font-size: 1.1em;
       color: white;
-      background: $secondary5;
+      background: $primary5;
       margin-right: 0.5em;
     }
 
@@ -63,34 +63,34 @@
     }
   }
 
-  .JobEntry:nth-of-type(2n) {
+  .JobEntry:nth-last-of-type(2n) {
     .NomEntreprise {
-      margin-right: 0;
-      margin-left: auto;
-      padding: 0.5em 0.5em 0.5em 6em;
-      mask-image: linear-gradient(to left, white 60%, rgba(0,0,0,0.45) 80%, transparent);
-      background-color: $primary3;
+      margin-right: auto;
+      margin-left: 0;
+      padding: 0.5em 6em 0.5em 0.5em;
+      mask-image: linear-gradient(to right, white 60%, rgba(0,0,0,0.45) 80%, transparent);
+      background-color: $secondary3;
     }
 
     .Description {
-      margin-right: auto;
-      margin-left: 0;
-      border: $primary 1px solid;
+      margin-left: auto;
+      margin-right: 0;
+      border: $secondary3 1px solid;
 
       .MuiTypography-h3 {
-        color: $primary;
+        color: $secondary3;
       }
 
       .MuiChip-root {
-        background: $primary5;
+        background: $secondary5;
       }
 
       .MuiButton-outlined {
-        color: $primary;
-        border: 1px solid rgba($primary, 0.5);
+        color: $secondary;
+        border: 1px solid rgba($secondary, 0.5);
 
         &:hover {
-          border: 1px solid $primary;
+          border: 1px solid $secondary;
         }
       }
 
