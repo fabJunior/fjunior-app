@@ -6,7 +6,6 @@ import Typography from "@material-ui/core/es/Typography";
 import { Fade, Button } from '@material-ui/core';
 import { CSSTransition } from 'react-transition-group';
 import { Translate } from "react-redux-i18n";
-import { Parallax, Background } from 'react-parallax';
 
 // Ours
 import { colors } from "../../Styles/colors";
@@ -57,7 +56,7 @@ class HomeComponent extends Component<{
 
   createParticle = (x, y) => {
     const particle = document.createElement('particle');
-    document.body.querySelector(".floats").appendChild(particle);
+    document.body.querySelector(".floatContainer").appendChild(particle);
 
     // Calculate a random size from 5px to 25px
     const size = Math.floor(Math.random() * 20 + 5);
@@ -118,70 +117,48 @@ class HomeComponent extends Component<{
                 <Typography variant="h3"><Translate value="home.catchphrase" /></Typography>
               </Container>
 
-              <Container className="floats">
-                <Parallax
-                  style={{ position: "absolute", inset: "0", opacity: "0.2" }}
-                  bgStyle={{ left: "90%", top: "40%", filter: "blur(4px)" }}
-                  strength={-150}
-                >
-                  <Background>
-                    <div className="wrapper"><img width="300px" draggable="false" src={dots} onClick={this.animateFloat} /></div>
-                  </Background>
-                </Parallax>
-                <Parallax
-                  style={{ position: "absolute", inset: "0" }}
-                  bgStyle={{ left: "20%", top: "30%"}}
-                  strength={-300}
-                >
-                  <Background>
-                    <div className="wrapper"><img width="180px" draggable="false" src={lines} onClick={this.animateFloat} /></div>
-                  </Background>
-                </Parallax>
-                <Parallax
-                  style={{ position: "absolute", inset: "0", opacity: "0.2" }}
-                  bgStyle={{ left: "10%", top: "80%", filter: "blur(4px)" }}
-                  strength={-150}
-                >
-                  <Background>
-                    <div className="wrapper"><img width="300px" draggable="false" src={wave} onClick={this.animateFloat} /></div>
-                  </Background>
-                </Parallax>
-                <Parallax
-                  style={{ position: "absolute", inset: "0" }}
-                  bgStyle={{ left: "35%", top: "90%" }}
-                  strength={-200}
-                >
-                  <Background>
-                    <div className="wrapper"><img width="200px" draggable="false" src={wave} onClick={this.animateFloat} /></div>
-                  </Background>
-                </Parallax>
-                <Parallax
-                  style={{ position: "absolute", inset: "0" }}
-                  bgStyle={{ left: "70%", top: "30%" }}
-                  strength={-300}
-                >
-                  <Background>
-                    <div className="wrapper"><img width="120px" draggable="false" src={losange} onClick={this.animateFloat} /></div>
-                  </Background>
-                </Parallax>
-                <Parallax
-                  style={{ position: "absolute", inset: "0", opacity: "0.2" }}
-                  bgStyle={{ left: "10%", top: "50%", filter: "blur(4px)" }}
-                  strength={-150}
-                >
-                  <Background>
-                    <div className="wrapper"><img width="300px" draggable="false" src={losange} onClick={this.animateFloat} /></div>
-                  </Background>
-                </Parallax>
-                <Parallax
-                  style={{ position: "absolute", inset: "0" }}
-                  bgStyle={{ left: "90%", top: "100%" }}
-                  strength={-300}
-                >
-                  <Background>
-                    <div className="wrapper"><img width="200px" draggable="false" src={losange} onClick={this.animateFloat} /></div>
-                  </Background>
-                </Parallax>
+              <Container className="floatContainer">
+                  <div className="float" style={{ left: "80%", top: "30%", opacity: "0.1", filter: "blur(4px)" }}>
+                    <div>
+                      <img width="300px" height="300px" draggable="false" src={dots} onClick={this.animateFloat} />
+                    </div>
+                  </div>
+
+                  <div className="float" style={{ left: "15%", top: "10%" }}>
+                    <div>
+                      <img width="180px" height="180px" draggable="false" src={lines} onClick={this.animateFloat} />
+                    </div>
+                  </div>
+
+                  <div className="float" style={{ left: "5%", top: "70%", opacity: "0.1", filter: "blur(4px)" }}>
+                    <div>
+                      <img width="300px" height="300px" draggable="false" src={wave} onClick={this.animateFloat} />
+                    </div>
+                  </div>
+
+                  <div className="float" style={{ left: "40%", top: "70%" }}>
+                    <div>
+                      <img width="200px" height="200px" draggable="false" src={wave} onClick={this.animateFloat} />
+                    </div>
+                  </div>
+
+                  <div className="float" style={{ left: "60%", top: "5%" }}>
+                    <div>
+                      <img width="120px" height="120px" draggable="false" src={losange} onClick={this.animateFloat} />
+                    </div>
+                  </div>
+
+                  <div className="float" style={{ left: "5%", top: "40%", opacity: "0.1", filter: "blur(4px)" }}>
+                    <div>
+                      <img width="300px" height="300px" draggable="false" src={losange} onClick={this.animateFloat} />
+                    </div>
+                  </div>
+
+                  <div className="float" style={{ left: "85%", top: "75%" }}>
+                    <div>
+                      <img width="200px" height="200px" draggable="false" src={losange} onClick={this.animateFloat} />
+                    </div>
+                  </div>
               </Container>
             </Container>
           </CSSTransition>

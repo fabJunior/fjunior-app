@@ -9,7 +9,7 @@
     height: 100vh;
     width: 100%;
 
-    > .container.nomPrenom {
+    .nomPrenom {
       margin: auto;
       filter: drop-shadow(8px 12px 20px rgba(0,0,0,40%));
       z-index: 100;
@@ -20,9 +20,18 @@
       }
     }
 
-    .react-parallax {
-      img {
+    .floatContainer {
+      position: absolute;
+      overflow: hidden;
+      overflow: clip visible;
+      inset: 0px;
+
+      .float {
+        user-select:none;
+        width: fit-content;
+        position: absolute;
         filter: drop-shadow(5px 8px 14px black);
+        cursor: pointer;
       }
     }
   }

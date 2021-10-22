@@ -4,11 +4,11 @@ import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import Typography from "@material-ui/core/es/Typography";
 import { CSSTransition } from "react-transition-group";
+import { ParallaxBanner } from 'react-scroll-parallax';
 
 // Ours
 import "../../Styles/ExperiencesPro/transitions.scss";
 import VisibilitySensor from "../../Shared/UI/visibilitySensor";
-import ParallaxImage from "../../Shared/UI/parallaxImage";
 
 class JobEntryComponent extends Component<{
   entreprise: string,
@@ -28,7 +28,7 @@ class JobEntryComponent extends Component<{
 
               { this.props.children }
 
-              { this.props.imgSrc && <ParallaxImage imgSrc={this.props.imgSrc} />}
+              { this.props.imgSrc && <ParallaxBanner layers={[{ image: this.props.imgSrc, amount: 0.3 }]} style={{ height: "60vh" }} />}
 
               <hr/>
 

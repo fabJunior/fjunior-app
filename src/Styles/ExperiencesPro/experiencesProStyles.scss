@@ -107,10 +107,11 @@
     border-color: $secondary;
   }
 
-  .react-parallax {
+  .parallax-banner {
     margin-left: -5.5%;
     clip-path: unquote(generateWave());
     transition: clip-path 1s ease;
+    min-width: 100vw;
 
     img {
       min-width: 100vw;
@@ -118,13 +119,13 @@
   }
 
   @media only screen and (max-width: 1200px) {
-    .react-parallax {
+    .parallax-banner {
       clip-path: unquote(generateWave($frequency: 2));
     }
   }
 
   @media only screen and (max-width: 600px) {
-    .react-parallax {
+    .parallax-banner {
       clip-path: unquote(generateWave($frequency: 3));
     }
   }

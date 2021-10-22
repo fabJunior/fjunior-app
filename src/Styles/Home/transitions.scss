@@ -33,16 +33,11 @@
     }
   }
 
-  .floats {
-    position: absolute;
-    overflow: hidden;
-    overflow: clip visible;
-    inset: 0px;
-
+  .floatContainer {
     --scale: 1;
 
     @for $i from 1 through 7 {
-      .react-parallax:nth-of-type(#{$i}) .react-parallax-background {
+      .float:nth-of-type(#{$i}) {
         @include animation(float-#{$i} 30s -1*random(100)/10+s ease infinite alternate);
 
         img:hover {
@@ -51,43 +46,33 @@
       }
 
       @keyframes float-#{$i} {
-        0%   {@include translate_rotate(-30+random(60) + px, -30+random(60) + px, +5 - random(10) + deg);}
-        25%  {@include translate_rotate(-30+random(60) + px, -30+random(60) + px, +5 - random(10) + deg);}
-        50%  {@include translate_rotate(-30+random(60) + px, -30+random(60) + px, +5 - random(10) + deg);}
-        75%  {@include translate_rotate(-30+random(60) + px, -30+random(60) + px, +5 - random(10) + deg);}
-        100% {@include translate_rotate(-30+random(60) + px, -30+random(60) + px, +5 - random(10) + deg);}
+        0%   {@include translate_rotate(-50+random(100) + px, -50+random(100) + px, +10 - random(20) + deg);}
+        25%  {@include translate_rotate(-50+random(100) + px, -50+random(100) + px, +10 - random(20) + deg);}
+        50%  {@include translate_rotate(-50+random(100) + px, -50+random(100) + px, +10 - random(20) + deg);}
+        75%  {@include translate_rotate(-50+random(100) + px, -50+random(100) + px, +10 - random(20) + deg);}
+        100% {@include translate_rotate(-50+random(100) + px, -50+random(100) + px, +10 - random(20) + deg);}
       }
     }
 
-    .react-parallax:nth-of-type(7) .react-parallax-background img {
+    .float:nth-of-type(7) img {
       @include transform(rotate(-20deg) scale(var(--scale)));
     }
 
-    .react-parallax:nth-of-type(6) .react-parallax-background img {
+    .float:nth-of-type(6) img {
       @include transform(rotate(-20deg) scale(var(--scale)));
     }
 
-    .react-parallax:nth-of-type(4) .react-parallax-background img {
+    .float:nth-of-type(4) img {
       @include transform(rotate(20deg) scale(var(--scale)));
     }
 
-    .react-parallax {
-      pointer-events: none;
-      user-select:none;
-
-      .react-parallax-background {
-        pointer-events: all;
-        cursor: pointer;
-      }
-    }
-
-    .react-parallax .react-parallax-background img {
+    .float img {
       @include transform(rotate(0deg) scale(var(--scale)));
       @include transition(200ms ease);
     }
 
     @media only screen and (min-width: 2000px) {
-      --scale: 1.2;
+      --scale: 1.3;
     }
 
     @media only screen and (max-width: 1450px) {

@@ -2,6 +2,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 // Ours
 import { colors } from "./Styles/colors";
@@ -98,11 +99,13 @@ const theme = createMuiTheme({
 
 // Factor out what normally would go in root.js in order to combine Router && Redux store
 const Root = ({ store }) => (
-  <Provider store={store}>
-    <MuiThemeProvider theme={theme}>
-      <App {...store}/>
-    </MuiThemeProvider>
-  </Provider>
+  <ParallaxProvider>
+    <Provider store={store}>
+      <MuiThemeProvider theme={theme}>
+          <App {...store}/>
+      </MuiThemeProvider>
+    </Provider>
+  </ParallaxProvider>
 );
 
 export default Root;
