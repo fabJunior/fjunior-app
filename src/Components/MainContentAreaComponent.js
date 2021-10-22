@@ -7,7 +7,6 @@ import { ParallaxBanner, useController } from 'react-scroll-parallax';
 // Ours
 import Home from "../Containers/Home";
 import Header from "../Containers/Header";
-import ParallaxImage from "../Shared/UI/parallaxImage";
 import Presentation from "../Containers/Presentation";
 import ExperiencesPro from "../Containers/ExperiencesPro";
 
