@@ -4,7 +4,7 @@
   $width_px: 1000;
   $height_px: 115;
   $offset: 100;
-  $units: $frequency * $width_px / 100 ;
+  $units: $frequency * math.div($width_px, 100);
 
   $clipPathString: 'polygon(0% 100%, 100% 100% ';
 
@@ -12,12 +12,12 @@
     $val: 0;
 
     @if $fn == 'cos' {
-      $val: $offset + $amplitude * math.cos($i/$units);
+      $val: $offset + $amplitude * math.cos(math.div($i, $units));
     } @else {
-      $val: $offset + $amplitude * math.sin($i/$units);
+      $val: $offset + $amplitude * math.sin(math.div($i, $units));
     }
     
-    $val: (math.round($val * 100)/100) / $height_px*100;
+    $val: math.div( math.div(math.round($val * 100), 100), $height_px ) * 100;
 
     $clipPathString: $clipPathString + ', ' + (100 - $i) + '% ' + (100 - $val) + '%';
   }
