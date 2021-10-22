@@ -1,4 +1,5 @@
 @import '../functions';
+@import '../colors';
 
 .HomeContainer {
   background-size: cover;
@@ -13,6 +14,10 @@
       margin: auto;
       filter: drop-shadow(8px 12px 20px rgba(0,0,0,40%));
       z-index: 100;
+      padding: 0.7em 2em 2em;
+      border: 0.4em solid $secondary2;
+      border-radius: 1em 1em 0 0;
+      background: hsl(257deg 32% 25%);
 
       .MuiTypography-h1 {
         font-size: 6.25em;
