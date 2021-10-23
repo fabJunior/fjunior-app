@@ -1,0 +1,24 @@
+# This is a basic workflow that is manually triggered
+name: Build
+
+# Triggers the workflow on push or pull request events
+on: push
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [12]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: install # will run `yarn install` command
+      - uses: borales/actions-yarn@v2.3.0
+        env:
+          CI: false
+        with:
+          cmd: build # will run `yarn build` command
+
