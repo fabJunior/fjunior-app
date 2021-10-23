@@ -30,8 +30,6 @@ class JobEntryComponent extends Component<{
 
               { this.props.imgSrc && <ParallaxBanner layers={[{ image: this.props.imgSrc, amount: 0.3 }]} style={{ height: "60vh" }} />}
 
-              <hr/>
-
             </Container>
           </CSSTransition>
         )}

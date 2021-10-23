@@ -3,66 +3,77 @@
 
 .ExperiencesPro {
   margin-bottom: 0!important;
-  
-  .NomEntreprise {
-    margin-left: auto;
-    padding: 0.5em 0.5em 0.5em 6em;
-    display: inline-block;
-    border-radius: 3px;
-    background-color: $primary3;
-    mask-image: linear-gradient(to left, white 60%, rgba(0,0,0,0.45) 80%, transparent);
-  }
 
-  .Description {
-    margin-right: auto;
-    margin-top: 25px;
-    border: $primary 1px solid;
-    padding: 10px;
-    border-radius: 3px;
-    box-shadow: rgba(black, 60%) 5px 5px 20px 0px;
+  // Default Job Entry look
+  .JobEntry {
+    .NomEntreprise {
+      margin-left: auto;
+      padding: 0.5em 0.5em 0.5em 6em;
+      display: inline-block;
+      border-radius: 3px;
+      background-color: $primary3;
+      mask-image: linear-gradient(to left, white 60%, rgba(0,0,0,0.45) 80%, transparent);
+    }
 
-    max-width: 45%;
-    transition: max-width 600ms;
+    .Description {
+      margin-right: auto;
+      margin-top: 25px;
+      border: $primary 1px solid;
+      padding: 10px;
+      border-radius: 3px;
+      box-shadow: rgba(black, 60%) 5px 5px 20px 0px;
 
-    .MuiTypography-h3 {
-      color: $primary;
+      max-width: 45%;
+      transition: max-width 600ms;
 
-      &:not(:first-child) {
-        margin-top: 0.5em;
-        line-height: 2em;
+      .MuiTypography-h3 {
+        color: $primary;
+
+        &:not(:first-child) {
+          margin-top: 0.5em;
+          line-height: 2em;
+        }
       }
-    }
 
-    .MuiTypography-body1 {
-      padding: 0 25px;
-      margin-bottom: 25px;
-    }
+      .MuiTypography-body1 {
+        padding: 0 25px;
+        margin-bottom: 25px;
+      }
 
-    .chips-container {
-      line-height: 3rem;
-    }
-    
-    .MuiChip-root {
-      font-size: 1.1em;
-      color: white;
-      background: $primary5;
-      margin-right: 0.5em;
-    }
+      .chips-container {
+        line-height: 3rem;
+      }
+      
+      .MuiChip-root {
+        font-size: 1.1em;
+        color: white;
+        background: $primary5;
+        margin-right: 0.5em;
+      }
 
-    .LearnMore {
-      text-align: center;
+      hr {
+        width: 80%;
+        margin: 40px 10%;
+        box-shadow: black 5px 5px 10px 0;
+        border-color: $primary;
+      }
 
-      .MuiButton-outlined {
-        color: $secondary;
-        border: 1px solid rgba($secondary, 0.5);
+      .LearnMore {
+        text-align: center;
 
-        &:hover {
-          border: 1px solid $secondary;
+        .MuiButton-outlined {
+          color: $primary;
+          border: 1px solid rgba($primary, 0.5);
+
+          &:hover {
+            border: 1px solid $primary;
+          }
         }
       }
     }
   }
 
+  // Green entries (every second entry from the last one)
   .JobEntry:nth-last-of-type(2n) {
     .NomEntreprise {
       margin-right: auto;
@@ -95,16 +106,9 @@
       }
 
       hr {
-        border-color: $primary;
+        border-color: $secondary;
       }
     }
-  }
-
-  hr {
-    width: 80%;
-    margin: 40px 10%;
-    box-shadow: black 5px 5px 10px 0;
-    border-color: $secondary;
   }
 
   .parallax-banner {
@@ -129,20 +133,20 @@
       clip-path: unquote(generateWave($frequency: 3));
     }
   }
-}
 
-@media only screen and (max-width: 1200px) {
-  .ExperiencesPro .MuiTypography-h1 {
-    font-size: 4rem !important;
+  @media only screen and (max-width: 1200px) {
+    .MuiTypography-h1 {
+      font-size: 4rem !important;
+    }
+
+    .Description {
+      max-width: 70%;
+    }
   }
 
-  .ExperiencesPro .Description {
-    max-width: 70%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .ExperiencesPro .Description {
-    max-width: 90%;
+  @media only screen and (max-width: 600px) {
+    .Description {
+      max-width: 90%;
+    }
   }
 }
