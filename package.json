@@ -36,6 +36,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build && gzipper compress ./build && gzipper compress --brotli ./build",
     "push": "rm -r ./prod/* && cp -r ./build/* ./prod/",
+    "build:push": "yarn run build && yarn run push",
     "build:dev": "REACT_APP_ENV=development react-scripts build",
     "build:production": "REACT_APP_ENV=production react-scripts build"
   },
