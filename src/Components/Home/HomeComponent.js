@@ -118,25 +118,13 @@ class HomeComponent extends Component<{
               </Container>
 
               <Container className="floatContainer">
-                  <div className="float" style={{ left: "80%", top: "30%", opacity: "0.1", filter: "blur(4px)" }}>
-                    <div>
-                      <img width="300px" height="300px" draggable="false" src={dots} onClick={this.animateFloat} />
-                    </div>
-                  </div>
-
                   <div className="float" style={{ left: "15%", top: "10%" }}>
                     <div>
                       <img width="180px" height="180px" draggable="false" src={lines} onClick={this.animateFloat} />
                     </div>
                   </div>
 
-                  <div className="float" style={{ left: "5%", top: "70%", opacity: "0.1", filter: "blur(4px)" }}>
-                    <div>
-                      <img width="300px" height="300px" draggable="false" src={wave} onClick={this.animateFloat} />
-                    </div>
-                  </div>
-
-                  <div className="float" style={{ left: "40%", top: "70%" }}>
+                  <div className="float" style={{ left: "10%", top: "70%" }}>
                     <div>
                       <img width="200px" height="200px" draggable="false" src={wave} onClick={this.animateFloat} />
                     </div>
@@ -145,12 +133,6 @@ class HomeComponent extends Component<{
                   <div className="float" style={{ left: "60%", top: "5%" }}>
                     <div>
                       <img width="120px" height="120px" draggable="false" src={losange} onClick={this.animateFloat} />
-                    </div>
-                  </div>
-
-                  <div className="float" style={{ left: "5%", top: "40%", opacity: "0.1", filter: "blur(4px)" }}>
-                    <div>
-                      <img width="300px" height="300px" draggable="false" src={losange} onClick={this.animateFloat} />
                     </div>
                   </div>
 

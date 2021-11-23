@@ -55,16 +55,8 @@
       }
     }
 
-    .float:nth-of-type(7) img {
-      @include transform(rotate(-20deg) scale(var(--scale)));
-    }
-
-    .float:nth-of-type(6) img {
-      @include transform(rotate(-20deg) scale(var(--scale)));
-    }
-
     .float:nth-of-type(4) img {
-      @include transform(rotate(20deg) scale(var(--scale)));
+      @include transform(rotate(-20deg) scale(var(--scale)));
     }
 
     .float img {
